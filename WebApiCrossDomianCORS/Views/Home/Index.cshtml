@@ -1,0 +1,30 @@
+﻿<div id="result"></div>
+
+<div><p><button class="btn" id="request" value="Request">Request</button></p></div>
+
+@section scripts{
+    <script>
+        $(function () {
+            $("#request").click(function() {
+                $.ajax({
+                    url: 'http://localhost:52536/api/values/',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        var strResult = "<table><th>ID</th><th>Название</th><th>Автор</th><th>Год издания</th>";
+                        $.each(data, function (index, book) {
+                            strResult += "<tr><td>" + book.Id + "</td><td> " + book.Name + "</td><td>" +
+                            book.Author + "</td><td>" + book.Year +
+                            "</td><td><a id='editItem' data-item='" + book.Id + "' onclick='EditItem(this);' >Редактировать</a></td>" +
+                            "<td><a id='delItem' data-item='" + book.Id + "' onclick='DeleteItem(this);' >Удалить</a></td></tr>";
+                        });
+                        strResult += "</table>";
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        $('#result').text(jqXHR.responseText || textStatus);
+                    }
+                });
+            })
+        })
+    </script>
+    }

@@ -7,7 +7,8 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
-using System.Web.Routing;
+using System.Web.Routing;   
+using WebApiContrib.Formatting.Jsonp;               //for support jsonp(for crossdomian request)
 
 namespace BookingApp
 {
@@ -15,6 +16,8 @@ namespace BookingApp
     {
         protected void Application_Start()
         {
+            GlobalConfiguration.Configuration.AddJsonpFormatter();  //for support jsonp
+
             Database.SetInitializer(new BookDbInitializer());
 
             AreaRegistration.RegisterAllAreas();

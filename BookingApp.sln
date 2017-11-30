@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingApp", "BookingApp\BookingApp.csproj", "{841648AB-263C-4563-8537-1BC9D81B73D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiCrossdomianTest", "WebApiCrossdomianTest\WebApiCrossdomianTest.csproj", "{791A812D-BA49-4DF5-B248-6C8F3ABC8704}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiCrossDomianCORS", "WebApiCrossDomianCORS\WebApiCrossDomianCORS.csproj", "{A30548D2-07AE-4CA8-9123-148216E04CB9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{841648AB-263C-4563-8537-1BC9D81B73D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{841648AB-263C-4563-8537-1BC9D81B73D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{841648AB-263C-4563-8537-1BC9D81B73D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{791A812D-BA49-4DF5-B248-6C8F3ABC8704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{791A812D-BA49-4DF5-B248-6C8F3ABC8704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{791A812D-BA49-4DF5-B248-6C8F3ABC8704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{791A812D-BA49-4DF5-B248-6C8F3ABC8704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A30548D2-07AE-4CA8-9123-148216E04CB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A30548D2-07AE-4CA8-9123-148216E04CB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A30548D2-07AE-4CA8-9123-148216E04CB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A30548D2-07AE-4CA8-9123-148216E04CB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
