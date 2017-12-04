@@ -10,9 +10,20 @@ using System.Web.Http.Description;
 
 namespace BookingApp.Controllers
 {
+    //[RoutePrefix("home")] add prefix
     public class ValuesController : ApiController
     {
         BookContext db = new BookContext();
+
+        public string GetValue()
+        {
+            return "getvalue";
+        }
+
+        public string Get(int id)
+        {
+            return "id: " + id.ToString();
+        }
 
         //first variant
         //public IEnumerable<Book> GetBooks()
@@ -29,6 +40,27 @@ namespace BookingApp.Controllers
         public IHttpActionResult GetBooks()
         {
             return Ok(db.Books);
+        }
+
+        [Route("api/values/authors")]
+        public IEnumerable<string> GetAuthors()
+        {
+            return db.Books.Select(b => b.Author).Distinct();
+        }
+
+        [Route("api/values/{id}/author")]
+        public string GetAuthor(int id)
+        {
+            Book b = db.Books.Find(id);
+            if (b != null)
+                return b.Author;
+            return "";
+        }
+
+        [Route("{id:int}/{name=volga}")]//default values
+        public string Test(int id, string name)
+        {
+            return id.ToString() + ". " + name;
         }
 
         //public Book GetBook(int id)

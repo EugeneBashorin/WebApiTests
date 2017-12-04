@@ -13,6 +13,7 @@ namespace WebApiCrossDomianCORS.Controllers
     [EnableCors(origins: "*", headers:"*",methods:"*")]    //!!!without '/' after localhost !!!
     public class ValuesController : ApiController
     {
+       
         // GET api/values
         public IEnumerable<string> Get()
         {
